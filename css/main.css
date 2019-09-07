@@ -1,5 +1,5 @@
 /*CLASES REUTILIZABLES*/
-* {
+/* * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -67,7 +67,64 @@ a:hover {
 
 .text-uppercase {
   text-transform: uppercase;
+} */
+.containerBody{
+  width: 85%;
+  margin: 0 auto;
 }
-
 /*ESCRIBE TU CÓDIGO DESDE AQUÍ*/
+/* empezamos con el diseño del header */
+header{
+  background: #E95853;
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 0;
+}
+.menu-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo img{
+  width: 50px;
+  height: 50px;
+}
+nav ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+}
+  nav ul li{
+    display: inline-block; 
+  }
+    nav ul li a{
+        display: block;
+        padding:1rem;
+        transition: all 0.4s linear;
+        font-size: 20px;
+    }
+    /* terminamos con el diseño del header */
 
+/* empezamos con el diseño del main */
+
+main{
+  padding-top: 10rem;
+  background:yellow;
+}
+/* emppezamos con el mediaquery responsive */
+@media only screen and(max-width:700px){
+  body {
+    background-color: lightblue;
+  }
+  nav ul{
+    display: block; 
+  }
+    nav ul li a{
+      display: block;
+      padding: 0.5rem 0;
+      transition: all 0.4s linear;
+    }
+}
