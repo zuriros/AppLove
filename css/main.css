@@ -1,5 +1,5 @@
 /*CLASES REUTILIZABLES*/
-/* * {
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -15,6 +15,8 @@ body {
   margin: 0 auto;
   font-size: 16px;
   line-height: 1.71429;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 img {
@@ -56,7 +58,7 @@ img {
   margin: 0px;
 }
 
-a {
+a, span{
   color: #373B47;
   text-decoration: none;
 }
@@ -67,7 +69,7 @@ a:hover {
 
 .text-uppercase {
   text-transform: uppercase;
-} */
+}
 .containerBody{
   width: 85%;
   margin: 0 auto;
@@ -75,18 +77,27 @@ a:hover {
 /*ESCRIBE TU CÓDIGO DESDE AQUÍ*/
 /* empezamos con el diseño del header */
 header{
-  background: #E95853;
+  background: white;
   position:fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 2rem 0;
+  padding: 0.4rem 0;
 }
 .menu-nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.menu-expander{
   flex-wrap: wrap;
+}
+.menu-icon{
+  display: none;
+  padding-top: 0.9rem;
+  font-size: 16px;   
+  font-weight: 900;
+  letter-spacing: 5px;
 }
 .logo img{
   width: 50px;
@@ -96,15 +107,24 @@ nav ul {
   margin: 0;
   padding:0;
   list-style: none;
+  
+
 }
   nav ul li{
     display: inline-block; 
+    
   }
     nav ul li a{
         display: block;
-        padding:1rem;
+        padding:0.6rem;
         transition: all 0.4s linear;
-        font-size: 20px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+      background: rgba(41, 45, 54, 0.199);
+      border: #E95853 1px solid;
+      border-radius:7px;
     }
     /* terminamos con el diseño del header */
 
@@ -115,15 +135,25 @@ main{
   background:yellow;
 }
 /* emppezamos con el mediaquery responsive */
-@media only screen and(max-width:700px){
-  body {
-    background-color: lightblue;
+@media only screen and (max-width: 600px){
+
+  .menu-icon, nav ul li, nav ul li a{
+    display: block
+  }
+  .menu-icon{
+    cursor: pointer;
+  }
+  nav{
+    width: 100%;
+    margin-top: 1rem;
   }
   nav ul{
-    display: block; 
+   display: none;
+  }
+   nav ul.show{
+    display: block;
   }
     nav ul li a{
-      display: block;
       padding: 0.5rem 0;
       transition: all 0.4s linear;
     }
