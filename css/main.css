@@ -124,7 +124,7 @@ nav ul {
       border: #E95853 1px solid;
       border-radius:7px;
     }
-    /* terminamos con el diseño del header */
+    /* --------------------------terminamos con el diseño del header ----------------------------------*/
 
 /* empezamos con el diseño del main */
 
@@ -171,26 +171,90 @@ p{
 .spanBtn a:hover{
   color: black;
 }
-
+/* -------------------------------------------fin-primera sección-------------------------------- */
 /* empieza el css de la segunda sección */
 .secSecond{
   background: rgb(241, 124, 114);
   color: white;
   padding-top: 4rem;
+  padding-bottom: 3rem;
   text-align: center;
 }
 .h2Sec{
  font-size: 1.65rem;
  letter-spacing: 2px;
  margin-bottom: 2rem;
+ font-weight: bold;
 
 }
 h4{
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.9px;
+  margin-bottom: 4rem;
 }
-/* emppezamos con el mediaquery responsive */
+.logoImg img{
+  width: 160px;
+  height: 160px;
+  display: inline;
+}
+h6{
+  margin: 1px;
+}
+.end{
+  margin-bottom:2rem;
+  padding-bottom: 1rem;
+}
+/* -------------------------------------------fin-segunda sección-------------------------------- */
+/* empieza la tercera sección*/
+ .secThird{
+    background: white;
+    padding-top: 3rem;
+    text-align: center;
+    align-items: center;
+ }
+ .secThirdImg img{
+    width: 85%;
+    height: 85%;
+ }
+  .secThird h4{
+    color: rgb(85, 84, 84);
+    font-weight: bold;
+  }
+  .imgSec{
+    padding-top: 3rem;
+  }
+  .imgThird{
+    width: 100%;
+    margin-top: 2rem; 
+  }
+  .logoImgThird img{
+    width: 90%;
+    height: 30%;
+    margin: 0.9rem;
+  }
+  
+   .imgThird span{
+     color: #373B47;
+     font-weight: bold;
+     font-size: 14px;
+   }
+  
+/* -------------------------------------------fin-tercera sección-------------------------------- */
+/* empezamos con el footer  */
+
+/* empezamos con el mediaquery responsive */
+@media only screen and (min-width: 400px){
+  .imgThird{
+    width: 18rem;
+    /* margin-left: 10%; */
+    display: inline-block;
+  }
+  .logoImgThird img{
+    width: 260px;
+    height: 230px;
+  }
+}
 @media only screen and (max-width: 600px){
 
   .menu-icon, nav ul li, nav ul li a{
@@ -213,4 +277,23 @@ h4{
       padding: 0.5rem 0;
       transition: all 0.4s linear;
     }
+/* tercera sección imagenes */
+
+}
+@media only screen and (min-width: 700px){
+  
+  .image-content{
+    width: 12rem;
+    display: inline-block;
+    
+ }
+
+}
+@media only screen and (min-width: 908px){
+  
+  .image-content{
+    width: 18rem;
+    display: inline-block;
+ }
+
 }
